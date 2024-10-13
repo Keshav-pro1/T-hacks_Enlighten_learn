@@ -154,7 +154,11 @@ nav ul li a:hover {
     text-align: center;
 }
 #features div{
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s;
+  height: 100px;
+  padding-top: 1.5rem;
 
 }
 .feature h3 {
@@ -164,7 +168,8 @@ nav ul li a:hover {
 
 .feature p {
     color: #666;
-    padding: 0 1.2rem 0.5rem 1.2rem; /*bhumi */
+    padding: 0 1.2rem 0.5rem 1.2rem;
+
 
 }
 
@@ -190,50 +195,51 @@ nav ul li a:hover {
   align-items: space-evenly;
   flex-direction: row;
 } */
-
+.alert{
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  color: #e29042;
+}
 .card {
   width: 350px;
-  height: 420px;
+  height: 130px;
   background-color: #F9F3F6;
   margin: 2rem;
   border: 2px solid #D7AFC4;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
-.card button{
+/* .card button{
   width: 200px;
   height: 2.7rem;
   margin-top: -1.8rem;
   margin-left: 4.3rem;
   border-radius: 1.7rem;
-  background-color: #E8D1DD;/*bhumi*/
-  /* background: linear-gradient(to right, #4CAF50, #2E8B57); */
+  background-color: #E8D1DD;
+  /* background: linear-gradient(to right, #4CAF50, #2E8B57);
   border: 1px solid black;
   font-size: 1.5rem;
   cursor: pointer;
-transition: background-color 0.3s ease; /*bhumi*/
-}
+transition: background-color 0.3s ease;
+}  */
 .card:hover{
   box-shadow: 2px 2px 20px black;
   transform: translateY(-5px);
 }
-.card img{
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-  margin-right: 1.5rem;
-  height: 190px;
-  width: 296px;
-  border-radius: 5px;
-}
+
 .card h3{
-  margin-top: -0.1rem;
+  margin-top: 1.2rem;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  padding-bottom: 0.9rem;
 }
 .card p{
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-align: center;
+  /* padding-top: 2rem; */
+  opacity: 0.7;
 }
 .card button a{
   text-decoration: none;

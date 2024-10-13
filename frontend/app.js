@@ -8,33 +8,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Modal Interaction Example (Optional)
-const modalBtn = document.querySelector('.cta-btn.green');
-const modal = document.createElement('div');
-modal.classList.add('modal');
-modal.innerHTML = `
-    <div class="modal-content">
-        <h2>Enroll in Our Courses</h2>
-        <p>Submit your details to get started.</p>
-        <button class="close-modal">Close</button>
-    </div>
-`;
-document.body.appendChild(modal);
 
-modalBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-});
-
-document.querySelector('.close-modal').addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Hide modal on outside click
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeBtn = document.querySelector('.dark-mode-btn');
@@ -48,3 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Check if the browser supports notifications
+if ("Notification" in window) {
+    // Request permission from the user
+    Notification.requestPermission().then(function(permission) {
+        // If the user accepts, show a notification
+        if (permission === "granted") {
+            showNotification();
+        }
+    });
+}
+
+// Function to show the notification
+function showNotification() {
+    const notification = new Notification("Welcome!", {
+        body: "Thanks for visiting our site!",
+        icon: "https://via.placeholder.com/100x100.png?text=Welcome"
+    });
+
+    // Optional: add a click event to the notification
+    notification.onclick = function(event) {
+        window.focus(); // Focus the browser window when notification is clicked
+    };
+}
