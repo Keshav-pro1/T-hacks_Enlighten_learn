@@ -34,10 +34,39 @@ if ("Notification" in window) {
     });
 }
 
+// Alert 1
 // Function to show the notification
 function showNotification() {
-    const notification = new Notification("Welcome!", {
-        body: "Thanks for visiting our site!",
+    const notification = new Notification("Alert!!", {
+        body: "Ac's are Damaged in Campus 1, Repair Them As soon As Possible.",
+        icon: "https://via.placeholder.com/100x100.png?text=Welcome"
+    });
+
+    // Optional: add a click event to the notification
+    notification.onclick = function(event) {
+        window.focus(); // Focus the browser window when notification is clicked
+    };
+}
+
+// Alert 2
+function showNotification() {
+    const notification = new Notification("Alert!!", {
+        body: "Time table has been changed for CSE and ECE 2nd year Batch.",
+        icon: "https://via.placeholder.com/100x100.png?text=Welcome"
+    });
+
+    // Optional: add a click event to the notification
+    notification.onclick = function(event) {
+        window.focus(); // Focus the browser window when notification is clicked
+    };
+}
+
+
+// Alert 3
+
+function showNotification() {
+    const notification = new Notification("Alert!!", {
+        body: "Farewell has been schedule for 25th December.",
         icon: "https://via.placeholder.com/100x100.png?text=Welcome"
     });
 
