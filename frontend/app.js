@@ -30,6 +30,8 @@ if ("Notification" in window) {
         // If the user accepts, show a notification
         if (permission === "granted") {
             showNotification();
+            showNotification();
+            showNotification();
         }
     });
 }
@@ -75,3 +77,5 @@ function showNotification() {
         window.focus(); // Focus the browser window when notification is clicked
     };
 }
+
+
